@@ -1,0 +1,48 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "mowasalati-app",
+          "appId": "1:165104859284:android:977018752f0c89d12ddc81",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "mowasalati-app",
+          "configurations": {
+            "android": "1:165104859284:android:977018752f0c89d12ddc81",
+            "ios": "1:165104859284:ios:b2cdc57bc00832a72ddc81"
+          }
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "mowasalati-app",
+          "appId": "1:165104859284:ios:b2cdc57bc00832a72ddc81",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
