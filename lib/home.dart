@@ -7,6 +7,7 @@ import 'package:http/http.dart' as http;
 import 'package:tahadi/travelmap.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 // ── Design tokens ──
 const _blue = Color(0xFF3563E9);
@@ -117,7 +118,7 @@ class _LocationSwapperPageState extends State<LocationSwapperPage>
 
   // ── API ──
   Future<Map<String, dynamic>> fetchTravelRoutes(String from, String to) async {
-    final apiKey = 'YOUR_GEMINI_API_KEY';
+    final apiKey = dotenv.env['GEMINI_API_KEY'] ?? '';
     final endpoint =
         'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=$apiKey';
 

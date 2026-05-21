@@ -8,6 +8,7 @@ import 'package:intl/intl.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class TravelMapPage extends StatefulWidget {
   final String routeId;
@@ -29,7 +30,7 @@ class _TravelMapPageState extends State<TravelMapPage> {
   int? selectedStepIndex;
 
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-  final String _geminiApiKey = 'YOUR_GEMINI_API_KEY';
+  final String _geminiApiKey = dotenv.env['GEMINI_API_KEY'] ?? '';
 
   @override
   void initState() {

@@ -23,6 +23,7 @@ dependencies:
   font_awesome_flutter: ^10.8.0
   google_fonts: ^4.0.4
   intl: ^0.18.1
+  flutter_dotenv: ^5.1.0
 
 
 dev_dependencies:
@@ -31,3 +32,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - .env

@@ -68,10 +68,11 @@ The app takes a starting point and destination, then runs them through a multi-s
 flutter pub get
 ```
 
-2. Add your API keys in `lib/home.dart` and `lib/travelmap.dart`:
-```dart
-final apiKey = 'YOUR_GEMINI_API_KEY';
+2. Create your local environment file from the template:
+```bash
+cp .env.example .env
 ```
+Then open `.env` and replace `YOUR_GEMINI_API_KEY_HERE` with a real key from [Google AI Studio](https://aistudio.google.com/app/apikey). The `.env` file is gitignored — never commit it.
 
 3. Set up your Google Maps API key in `android/app/src/main/AndroidManifest.xml` and `web/index.html`
 
